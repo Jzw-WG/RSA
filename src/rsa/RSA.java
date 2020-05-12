@@ -14,7 +14,7 @@ public class RSA {
 		BigInteger q=null;
 		BigInteger[] res=new BigInteger[2];
 		Random random = new Random();
-	    p=BigInteger.probablePrime(64, random);//为了效率，此处设为64
+	    p=BigInteger.probablePrime(64, random);//64位
 	    q=BigInteger.probablePrime(64, random);
 		res[0]=p;
 		res[1]=q;
@@ -76,7 +76,7 @@ public class RSA {
 	 */
 	public BigInteger getC(BigInteger m,BigInteger e,BigInteger n){
 		BigInteger c=null;
-		c=m.modPow(e, n);//返回其值为 (m^e  mod n)
+		c=m.modPow(e, n);//c=(m^e mod n)
 		return c;
 	}
 	/**
@@ -89,7 +89,7 @@ public class RSA {
 	 */
 	public BigInteger getDecrypt(BigInteger c,BigInteger n,BigInteger d){
 		BigInteger m=null;
-		m=c.modPow(d, n);//返回其值为 (c^d  mod n)
+		m=c.modPow(d, n);//m=(c^d mod n)
 		return m;
 	}
 }
