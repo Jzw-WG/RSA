@@ -15,7 +15,7 @@ public class TestRSA {
 			System.out.println("1、生成两个大素数：p="+ p +" q=" + q);
 			//step2.1:计算n
 			BigInteger n = p.multiply(q);//n=p*q
-			System.out.println("2、计算的n是："+n);
+			System.out.println("2、计算的n是：" + n);
 			//step2.2:计算sn
 			BigInteger sn = (p.subtract(new BigInteger("1"))).multiply(q.subtract(new BigInteger("1")));//sn=(p-1)*(q-1)
 			System.out.println("   计算的sn=(p-1)*(q-1)：sn=" + sn);
@@ -40,7 +40,9 @@ public class TestRSA {
 			System.out.println("RSA加密后的密文是：" + c);
 			//step8:进行解密
 			BigInteger mm = rsa.getDecrypt(c,n,d);//进行解密
-			System.out.println("8、解密后的的结果是：" + mm);
+			String sm2 = StringProcess.bigIntegerToString(mm);
+
+			System.out.println("8、解密后的的结果是：" + sm2);
 		} catch (Exception ex) {
 			//TODO: handle exception
 		}
