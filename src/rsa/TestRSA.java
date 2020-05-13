@@ -32,7 +32,7 @@ public class TestRSA {
 			//step7:进行加密
 			System.out.println("7、请输入要发送的明文:");
 			Scanner scanner = new Scanner(System.in);
-			String sm  = scanner.nextLine();
+			String sm = scanner.nextLine();
 			//step:若输入字符，则将字符串转化为数字数组后加密
 			BigInteger m = StringProcess.stringToBigInteger(sm);
 
