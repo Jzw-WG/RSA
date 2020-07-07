@@ -12,7 +12,7 @@ public class TestRSA {
 			//step1:产生两个大素数
 			BigInteger p = primeNumber[0];
 			BigInteger q = primeNumber[1];
-			System.out.println("1、生成两个大素数：p="+ p +" q=" + q);
+			System.out.println("1、生成两个大素数：p=" + p + " q=" + q);
 			//step2.1:计算n
 			BigInteger n = p.multiply(q);//n=p*q
 			System.out.println("2、计算的n是：" + n);
